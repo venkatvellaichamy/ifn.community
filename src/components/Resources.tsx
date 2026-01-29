@@ -59,9 +59,13 @@ export function Resources() {
                                 {resource.description}
                             </p>
 
-                            <Button variant="ghost" size="sm" className="w-full justify-between items-center bg-slate-50 text-slate-400 cursor-not-allowed hover:bg-slate-50" disabled>
-                                Coming Soon
-                                {/* <span className="text-lg">→</span> */}
+                            <Button
+                                variant={index === 0 ? "primary" : "ghost"}
+                                size="sm"
+                                className={`w-full justify-between items-center ${index === 0 ? "" : "bg-slate-50 text-slate-400 cursor-not-allowed hover:bg-slate-50"}`}
+                                disabled={index !== 0}
+                            >
+                                {index === 0 ? "Download Free Playbook" : "Coming Soon"}
                             </Button>
                         </div>
                     ))}

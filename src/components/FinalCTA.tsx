@@ -38,6 +38,9 @@ export function FinalCTA({ onJoinClick }: FinalCTAProps) {
                             <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400" /> Free to join</span>
                             <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400" /> No credit card required</span>
                         </p>
+                        <p className="mt-4 text-xs font-medium text-accent/90 text-center lg:text-left animate-pulse">
+                            Applications reviewed weekly. Next cohort opens Monday.
+                        </p>
                     </div>
 
                     <div className="relative hidden lg:block w-80 h-80">

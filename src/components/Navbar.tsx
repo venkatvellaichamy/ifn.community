@@ -58,7 +58,7 @@ export function Navbar({ onJoinClick }: NavbarProps) {
                             ))}
                         </div>
                         <div className="flex items-center gap-3">
-                            <Button variant="ghost" size="sm">Log In</Button>
+
                             <Button size="sm" onClick={onJoinClick}>Join Network</Button>
                         </div>
                     </div>
@@ -94,9 +94,7 @@ export function Navbar({ onJoinClick }: NavbarProps) {
                                 </a>
                             ))}
                             <div className="pt-4 flex flex-col gap-3">
-                                <Button variant="ghost" fullWidth onClick={() => setIsMobileMenuOpen(false)}>
-                                    Log In
-                                </Button>
+
                                 <Button fullWidth onClick={() => { setIsMobileMenuOpen(false); onJoinClick(); }}>
                                     Join Network
                                 </Button>

@@ -80,6 +80,7 @@ export function HeroVisual() {
                     <div>
                         <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Connections</div>
                         <div className="text-lg font-bold text-slate-900">2,500+ Made</div>
+                        <div className="text-[10px] uppercase tracking-wide font-medium text-slate-400 mt-1">Featured at Capital Factory, Austin</div>
                     </div>
                 </div>
             </motion.div>

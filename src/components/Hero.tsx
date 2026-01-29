@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Button } from './Button';
 import { Container } from './Container';
@@ -9,6 +10,20 @@ interface HeroProps {
 }
 
 export function Hero({ onJoinClick }: HeroProps) {
+    const [index, setIndex] = useState(0);
+    const words = [
+        { text: "Global", color: "text-primary" },
+        { text: "International", color: "text-accent" },
+        { text: "Immigrant", color: "text-primary" }
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setIndex((prev) => (prev + 1) % words.length);
+        }, 3000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
             {/* Background Gradient */}
@@ -29,12 +44,27 @@ export function Hero({ onJoinClick }: HeroProps) {
                             Grand Opening: Inaugurating Today!
                         </div>
 
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
-                            Where Global Founders <span className="text-primary">Connect</span>, <span className="text-accent">Grow</span>, and <span className="text-primary">Succeed</span>
+                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6 tracking-tight flex flex-wrap items-center justify-center lg:justify-start gap-x-3 gap-y-2">
+                            <span>Where</span>
+                            <span className="inline-flex relative h-[1.2em] w-auto overflow-hidden">
+                                <AnimatePresence mode="wait">
+                                    <motion.span
+                                        key={index}
+                                        initial={{ y: "110%", skewY: 10, opacity: 0, width: "auto" }}
+                                        animate={{ y: 0, skewY: 0, opacity: 1, width: "auto" }}
+                                        exit={{ y: "-110%", skewY: -10, opacity: 0, width: "auto" }}
+                                        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                                        className={`block whitespace-nowrap ${words[index].color}`}
+                                    >
+                                        {words[index].text}
+                                    </motion.span>
+                                </AnimatePresence>
+                            </span>
+                            <span className="w-full sm:w-auto">Founders <span className="text-primary">Connect</span>, <span className="text-accent">Grow</span>, and <span className="text-primary">Succeed</span></span>
                         </h1>
 
                         <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                            Access mentorship, investors, events, and a community that understands your journey. Join founders from 85+ countries building the future.
+                            The only founder network built specifically for immigrant and international founders navigating US startup ecosystems.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">

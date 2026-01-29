@@ -5,27 +5,27 @@ import { Container } from './Container';
 export function ValueProps() {
     const features = [
         {
-            icon: Calendar,
-            title: 'Global Events & Local Connections',
-            description: 'From virtual summits to local chapter meetups. Connect with founders in your city and around the world through monthly themed sessions.',
-            color: 'bg-blue-500',
-        },
-        {
             icon: Users,
             title: 'Mentorship & Peer Matching',
-            description: 'Get matched with founders who have solved your exact challenges. Access structured mentorship and join intimate peer advisory circles.',
+            description: '1:1 mentor matching within 72 hours. Get matched with founders who have solved your exact challenges.',
             color: 'bg-indigo-500',
         },
         {
             icon: TrendingUp,
             title: 'Investor Access & Fundraising',
-            description: 'Perfect your pitch with monthly practice sessions, get curated investor intros, and access our fundraising strategy resources.',
+            description: 'Curated investor intros every month. Perfect your pitch with practice sessions and access guidance.',
             color: 'bg-emerald-500',
+        },
+        {
+            icon: Calendar,
+            title: 'Global Events & Local Connections',
+            description: 'Two high-signal founder sessions per month. From virtual summits to local chapter meetups.',
+            color: 'bg-blue-500',
         },
         {
             icon: BookOpen,
             title: 'Resources & Founder Toolkit',
-            description: 'Exclusive playbooks on scaling and hiring. Access a vetted template library and receive our weekly newsletter with curated insights.',
+            description: 'Actionable playbooks and templates. Exclusive vetted library and weekly curated insights.',
             color: 'bg-amber-500',
         },
     ];

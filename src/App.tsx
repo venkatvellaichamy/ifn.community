@@ -6,6 +6,7 @@ import { ValueProps } from './components/ValueProps';
 import { HowItWorks } from './components/HowItWorks';
 
 // Lazy load components that are not immediately visible
+const FounderStory = lazy(() => import('./components/FounderStory').then(module => ({ default: module.FounderStory })));
 const Testimonials = lazy(() => import('./components/Testimonials').then(module => ({ default: module.Testimonials })));
 const EventsPreview = lazy(() => import('./components/EventsPreview').then(module => ({ default: module.EventsPreview })));
 const Resources = lazy(() => import('./components/Resources').then(module => ({ default: module.Resources })));
@@ -27,6 +28,7 @@ function App() {
         <HowItWorks />
 
         <Suspense fallback={<div className="h-96 flex items-center justify-center">Loading...</div>}>
+          <FounderStory />
           <Testimonials />
           <EventsPreview />
           <Resources />

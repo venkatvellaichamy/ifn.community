@@ -36,7 +36,7 @@ export function FAQ() {
 
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
-                        <FAQItem key={index} question={faq.question} answer={faq.answer} />
+                        <FAQItem key={index} question={faq.question} answer={faq.answer} defaultOpen={index < 2} />
                     ))}
                 </div>
             </Container>
@@ -44,8 +44,8 @@ export function FAQ() {
     );
 }
 
-function FAQItem({ question, answer }: { question: string, answer: string }) {
-    const [isOpen, setIsOpen] = useState(false);
+function FAQItem({ question, answer, defaultOpen = false }: { question: string, answer: string, defaultOpen?: boolean }) {
+    const [isOpen, setIsOpen] = useState(defaultOpen);
 
     return (
         <div className="border border-slate-200 rounded-xl bg-white overflow-hidden transition-all duration-200 hover:border-primary/20">

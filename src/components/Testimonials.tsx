@@ -3,21 +3,21 @@ import { Container } from './Container';
 export function Testimonials() {
     const testimonials = [
         {
-            quote: "I went from feeling isolated in Lagos to having a global support system. Through IFN, I connected with my first angel investor and three mentors who've been invaluable.",
+            quote: "Met my first angel investor and three mentors through IFN.",
             author: "Amara Okeke",
             role: "HealthTech Founder",
             location: "Lagos, Nigeria",
             image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=200&h=200"
         },
         {
-            quote: "The quality of founders here is unmatched. It's not just networking; it's about solving real problems together. I scaled my B2B SaaS to 10 countries with advice from this community.",
+            quote: "Scaled my B2B SaaS to 10 countries with IFN peer guidance.",
             author: "David Chen",
             role: "Founder, CloudScale",
             location: "Toronto, Canada",
             image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200"
         },
         {
-            quote: "Finding a technical co-founder was my biggest hurdle. IFN matched me with someone in Berlin who shared my vision perfectly. We're now raising our Series A.",
+            quote: "Found my technical co-founder in 3 weeks through IFN.",
             author: "Elena Rodriguez",
             role: "CEO, EcoSolutions",
             location: "Berlin, Germany",
